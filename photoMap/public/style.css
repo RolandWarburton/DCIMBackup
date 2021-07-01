@@ -1,0 +1,42 @@
+body {
+	background-color: #121212;
+	color: #dedede;
+}
+
+#app {
+	display: flex;
+	flex: 2;
+}
+
+#boundsList {
+	flex: 1;
+	height: 80vh;
+	overflow-y: scroll;
+}
+
+/* map styles */
+#mapid {
+	height: 80vh;
+	width: 50vw;
+}
+
+/* mobile */
+@media (pointer: none), (pointer: coarse) {
+	#mapid {
+		height: 100vh;
+		width: 100vw;
+	}
+
+	/* cbf so just hide the list */
+	#boundsList {
+		display: none;
+	}
+}
+
+/* Fix for the following error message (somehow) */
+/* https://github.com/Leaflet/Leaflet/issues/4686 */
+/* Will-change memory consumption is too high. Budget limit is the document surface area multiplied by 3 (1070496 px). Occurrences of will-change over the budget will be ignored. */
+.leaflet-fade-anim .leaflet-tile,
+.leaflet-zoom-anim .leaflet-zoom-animated {
+	will-change: auto !important;
+}
