@@ -1,4 +1,4 @@
-# Warchdog script
+# Watchdog script
 
 The plan is to intergrate this with huginn to generate alerts if there is a period of time where photos are not being written to the mobile backups folder.
 
